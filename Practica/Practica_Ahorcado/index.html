@@ -12,7 +12,7 @@
     </head>
     <body id="body" class="bg-primary">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="lifes" style="display: none;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="lifes" style="display: none; margin-bottom: -60px;">
             <div class="container px-4">
                 <p class="navbar-brand" style="font-size: 2rem; margin-bottom: -5px;" id="vidas">❤️</p>
                 <span id="numVidas" hidden>5</span>
@@ -21,15 +21,25 @@
 
         <!-- Header-->
         <header class="bg-primary bg-gradient text-white" id="empezar">
-            <div class="container px-4 text-center" style="margin-top: 100px;">
+            <div id="titulo" class="container px-4 text-center" style="margin-top: 80px;">
                 <h1 class="fw-bolder">Juego del Ahorcado</h1>
-                <p class="lead">&#9432;  Introduce letras por teclado o por botones en la pantalla para adivinar la palabra oculta, ¿Conseguirás descubrir cuál es?</p>
-                <a class="comenzar btn btn-lg btn-light" href="#juego" id="comenzar" style="margin-top: 80px;">Comenzar</a>
+                <p class="lead">&#9432;  La vida de una persona depende únicamente de adivinar la palabra oculta, ¿Conseguirás descubrir cuál es?</p>
+                <a class="comenzar btn btn-lg btn-light" href="#juego" id="comenzar" style="margin-top: 50px;">Comenzar</a><br>
+                <input type="button" id="normas" value="Mostrar normas" class="comenzar btn btn-lg btn-light" style="margin-top: 12px;">
+                
+                <div id="normasJuego" style="margin-top: 32px; display: none;">
+                    <h2>Normas:</h2>
+                    <p>&#9312; Debes introducir las letras por teclado pulsando en la caja de texto (donde pone "Escriba aquí") y seguir las instrucciones indicadas.</p>
+                    <p>&#9313; Otra manera de introducir letras es con botones situados en la parte inferior de la pantalla.</p>
+                    <p>&#9314; Si una letra introducida está en la palabra oculta, esta se mostrará, en caso contrario, perderá una vida (Situadas en la esquina superior-izquierda de la pantalla).</p>
+                    <p>&#9315; Si sus vidas llegan a 0, perderá la partida, ¡TEN CUIDADO!</p>
+                    <p>&#9316; Pasarlo bien, mucha suerte :)</p>
+                </div>
             </div>
         </header>
 
         <!-- Section -->
-        <section id="juego" class="bg-primary bg-gradient text-white" style="display: none;">
+        <section id="juego" class="bg-primary bg-gradient text-white" style="display: none; height: 50px;">
             <div class="container px-4 text-center"">
                 <h1 id="laPalabra" class="fw-bolder"></h1>
                 <h4 id="tema" class="fw-bolder text-light"></h4>
@@ -42,8 +52,8 @@
             <div class="container px-4">
                 <div id="divBotones" class="row gx-4 justify-content-center">
                     <div class="col-lg-8 text-center" style="margin: -40px 0px 16px 0px; border-radius: 10px; background-color: #1371FD; width: 450px;">
-                        <input type="text" id="escribir" maxlength="1" style="margin: 12px 0px;" placeholder="Escriba una letra aquí"><br>
-                        <p style="color: white; margin: -8px 0px;">(Pulse "enter" para enviar la letra)</p><br>
+                        <input type="text" id="escribir" maxlength="1" style="margin: 12px 0px; height: 30px;" placeholder="Escriba una letra aquí"><br>
+                        <p style="color: white; margin: -8px 0px;">(Pulse "intro/enter" para enviar la letra)</p><br>
                     </div>
                     
                     <div class="col-lg-8 text-center" style="margin: 16px 0px -16px 0px; width: 900px;">
@@ -55,10 +65,10 @@
 
         <!-- Footer -->
         <footer id="creador">
-            <div class="row gx-2 justify-content-center" style="width: 100%; margin-top: 150px;">
+            <div class="row gx-2 justify-content-center" style="width: 100%; margin-bottom: 8px; position: absolute; bottom: 0;">
                 <div class="col-lg-8 text-center">
                     <u class="text-light">&#169; Un juego creado por AZuL_Art239</u><br>
-                    <a class="text-light" href="https://www.instagram.com/usuarioazul_2.3.9/profilecard/?igsh=azVwaWk1dTQ0bXU3" style="text-decoration: none;"><img src="imagenes/Ig.png" style="width: 16px;"> AZuL_Art_239</a>
+                    <a class="text-light" href="https://www.instagram.com/azul_art_239?igsh=NWZtZ3ZxeGw1amQ5" style="text-decoration: none;"><img src="imagenes/Ig.png" style="width: 16px;"> AZuL_Art_239</a>
                 </div>
             </div>
         </footer>

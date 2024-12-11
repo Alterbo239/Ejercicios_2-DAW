@@ -1,0 +1,127 @@
+/* -----Test----- */
+body {
+  background-color: #f8f9fa;
+}
+.test-container {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 75%;
+  max-width: 90%;
+  margin: 20px auto;
+}
+.header {
+  background-color: #0d6efd;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #6c757d;
+  padding: 10px 20px;
+}
+.question {
+  margin-bottom: 20px;
+}
+.question label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+.question select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+  
+/* -----Formulario----- */
+  .container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  #datos {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+      background: #F9F9F9;
+    padding: 25px;
+    margin: 150px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);      
+  }
+  
+  #datos h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  
+  fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  
+  #datos input[type="text"],
+  #datos input[type="email"],
+  #datos input[type="tel"],
+  #datos input[type="url"],
+  #datos textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+  }
+  
+  #datos textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+  }
+  
+  #datos button[type="button"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #f0715f;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #5f9ef0;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+/* -----Resultado----- */
+#resultado {
+  background-color: #f9f9f9;
+  border: 2px solid #d3d3d3;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#premonicion {
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}

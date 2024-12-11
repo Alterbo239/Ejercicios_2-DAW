@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Partido Tenis</title>
+        <link rel="stylesheet" href="css/Partido_Tenis.css">
+    </head>
+    <body>
+        <!-- Marcador -->
+        <div class="row; col-md-offset-1 col-md-10; panel">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col col-sm-3 col-xs-12">
+                        <h4 class="title">Torneo <span id="nombreTorneo">IES Font de San Lluís</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Jugador</th>
+                            <th>Comunidad</th>
+                            <th>Puntos de Partido</th>
+                            <th>Set 1</th>
+                            <th>Set 2</th>
+                            <th>Set 3</th>
+                            <th id="set4">Set 4</th>
+                            <th id="set5">Set 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="nombre_J1"></td>
+                            <td><img class="bandera" src="src/Catalunia.jpg" width="25%"></td>
+                            <td id="puntos1">0</td>
+                            <td id="set1_j1">0</td>
+                            <td id="set2_j1">0</td>
+                            <td id="set3_j1">0</td>
+                            <td id="set4_j1">0</td>
+                            <td id="set5_j1">0</td>
+                        </tr>
+                        <tr>
+                            <td id="nombre_J2"></td>
+                            <td><img class="bandera" src="src/PaisBasco.png" width="25%"></td>
+                            <td id="puntos2">0</td>
+                            <td id="set1_j2">0</td>
+                            <td id="set2_j2">0</td>
+                            <td id="set3_j2">0</td>
+                            <td id="set4_j2">0</td>
+                            <td id="set5_j2">0</td>
+                        </tr>
+                        <tr>
+                            <td>Estadisticas de los Sets</td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="button" id="info_set1" value="Set 1" disabled></td>
+                            <td><input type="button" id="info_set2" value="Set 2" disabled></td>
+                            <td><input type="button" id="info_set3" value="Set 3" disabled></td>
+                            <td><input type="button" id="info_set4" value="Set 4" disabled></td>
+                            <td><input type="button" id="info_set5" value="Set 5" disabled></td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br><br>
+        <div class="row; col-md-offset-1 col-md-10; panel" style="padding: 20px;">
+            <div class="jugador check">
+                <input type="checkbox" name="j1" id="ace1"> <span>Ace</span> <br>
+                <input type="checkbox" name="j1" id="1ser1"> 1er servicio <br>
+                <input type="checkbox" name="j1" id="2ser1"> 2do servicio <br>
+                <input type="checkbox" name="j1" id="df1"> Doble falta <br>
+                <input type="checkbox" name="j1" id="gg1"> Golpe ganador <br>
+            </div>
+
+            <div class="jugador">
+                <img id="imagenJ1" class="atributos" src="src/Jugador_1.png">
+                <br>
+                <input class="atributos" id="j1" type="button" value="J1" style="height: 40px;">
+                <br><br>
+                <input class="atributos marcador" id="puntuacionJ1" type="button" value="0" disabled>
+            </div>
+            <div class="jugador">
+                <img id="imagenJ2" class="atributos" src="src/Jugador_2.png">
+                <br>
+                <input class="atributos" id="j2" type="button" value="J2" style="height: 40px;">
+                <br><br>
+                <input class="atributos marcador" id="puntuacionJ2" type="button" value="0" disabled>
+            </div>
+
+            <div class="jugador check">
+                <input type="checkbox" name="j2" id="ace2" disabled> <span>Ace</span> <br>
+                <input type="checkbox" name="j2" id="1ser2" disabled> 1er servicio <br>
+                <input type="checkbox" name="j2" id="2ser2" disabled> 2do servicio <br>
+                <input type="checkbox" name="j2" id="df2" disabled> Doble falta <br>
+                <input type="checkbox" name="j2" id="gg2" disabled> Golpe ganador <br>
+            </div>
+        </div>
+        <br>
+        <div id="estadisticas" class="row; col-md-offset-1 col-md-10; panel" style="padding: 20px; display: none;">
+            <!-- Aquí se introduciran las estadísticas por código. -->
+        </div>
+        <script type="module" src="js/Marcador.js"></script>
+    </body>
+</html>

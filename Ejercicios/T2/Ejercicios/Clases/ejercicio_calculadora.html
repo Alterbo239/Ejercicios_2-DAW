@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="calculadora.css">
+    </head>
+    <body>
+        <div class="calculator card" style="position: absolute; left: 35%; top: 30%;">
+
+            <input id="res" type="number" class="calculator-screen z-depth-1" value="0" disabled />
+        
+            <div class="calculator-keys">            
+                <button id="sumar" type="button" data-mdb-button-init class="operator btn btn-info" value="+">+</button>
+                <button id="restar" type="button" data-mdb-button-init class="operator btn btn-info" value="-">-</button>
+                <button id="mult" type="button" data-mdb-button-init class="operator btn btn-info" value="*">&times;</button>
+                <button id="divi" type="button" data-mdb-button-init class="operator btn btn-info" value="/">&divide;</button>
+            
+                <button id="potenciar" type="button" data-mdb-button-init class="operator btn btn-info" value="/">^</button>
+                <button id="raiz" type="button" data-mdb-button-init class="operator btn btn-info" value="/">√</button>
+                
+                <input type="number" id="num1" value="0" style="padding-left: 3%;">
+                <input type="number" id="num2" value="0" style="padding-left: 3%;">
+            </div>
+        </div>
+
+        <script src="ejercicio_971_Calculadora.js"></script>
+    </body>
+</html>

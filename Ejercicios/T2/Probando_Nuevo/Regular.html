@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expresiones regulares</title>
+    </head>
+    <body>
+        <script>
+            let valor = prompt("Ingrese un numero.");
+            let patron = new RegExp("^[0-9]{3}$");
+            let patron2 = /^[0-9]{3}$/;
+            //^ = Empieza. $ = Termina. [] = Rango de caracteres permitidos. 
+
+            if (patron.test(valor)) {
+                document.write("Valor correcto.");
+            } else {
+                document.write("Valor incorrecto.");
+            }
+            document.write("<br>");
+            
+            if (patron2.test(valor)) {
+                document.write("Valor correcto.");
+            } else {
+                document.write("Valor incorrecto.");
+            }
+            document.write("<br>");
+            
+            let valorTexto = prompt("Ingrese un texto.");
+            let patron3 = /que/;
+            if (patron3.test(valorTexto)) {
+                document.write("Hay un 'que' en el texto.");
+            } else {
+                document.write("No hay un 'que' en el texto.");
+            }
+            document.write("<br>");
+            
+            let patron4 = /[aeiouAEIOUáéíóú]/;
+            if (patron4.test(valorTexto)) {
+                document.write("Hay una vocal al menos.");
+            } else {
+                document.write("No hay vocales en el texto.");
+            }
+            document.write("<br>");
+            
+            let patron5 = /[0-9]{3,6}/;
+            if (patron5.test(valor)) {
+                document.write("El valor tiene entre 3 y 6 digitos.");
+            } else {
+                document.write("El numero no esta en el rango.");
+            }
+            document.write("<br>");
+            let patron6 = /[0-9]{3}/;
+            if (patron6.test(valor)) {
+                document.write("El valor tiene 3 digitos.");
+            } else {
+                document.write("No tiene 3 digitos justos.");
+            }
+            document.write("<br>");
+            let patron7 = /[0-9]{3,}/;
+            if (patron7.test(valor)) {
+                document.write("El valor tiene entre 3 o mas digitos.");
+            } else {
+                document.write("El valor tiene menos de 3 digitos.");
+            }
+            document.write("<br>");
+            document.write("<br>");
+
+            //? {0, 1}. * {0,}. + {1,}
+            let patron9 = /^([^a]*a?[^a]*)$/; //Le indicas que empieze y termine la expresión así.
+            if (patron9.test(valorTexto)) {
+                document.write("Hay 0 o 1 'a'.");
+            } else {
+                document.write("Hay mas de una 'a'.");
+            }
+            document.write("<br>");
+
+            //? {0, 1}. * {0,}. + {1,}
+            let patron8 = /^[\+\-]?[0-9]+$/;
+            if (patron8.test(valor)) {
+                document.write("Valor correcto.");
+            } else {
+                document.write("Ey, aprende a escribir un numero.");
+            }
+            document.write("<br>");
+
+            /**
+             * \d      [0-9]
+             * \D      [^0-9]
+             * \w      [a-zA-Z0-9_]
+             * \W      [^a-zA-Z0-9_]
+             * \s	   espacio en blanco
+             */
+
+            
+        </script>
+    </body>
+</html>

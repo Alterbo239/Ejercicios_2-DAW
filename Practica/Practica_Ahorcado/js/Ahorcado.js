@@ -12,9 +12,10 @@ window.addEventListener('load', inicio);
 function inicio() {
     document.getElementById("comenzar").addEventListener('click', comienzo);
     document.getElementById("escribir").addEventListener('keydown', comprobarLetraTeclado);
+    document.getElementById("normas").addEventListener('click', mostrarNormas);
 }
 
-///// Funciones para comenzar el juego /////
+/////////////// Funciones para comenzar el juego ///////////////
 /**
  * Funcion para empezar la partida, prepara el documento para que se vea en la seccion "jugar".
  */
@@ -53,9 +54,9 @@ function comienzo() {
 function generarBotones() {
     //Primera fila: 10 / Segunda fila: 9 / Tecera fila: 7.
     let botonesLetras = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "ñ", "z", "x", "c", "v", "b", "n", "m"];
-    let fila1 = parseInt(10);
-    let fila2 = parseInt(10);
-    let fila3 = parseInt(7);
+    const fila1 = parseInt(10);
+    const fila2 = parseInt(10);
+    const fila3 = parseInt(7);
 
     //Generamos los elementos para que no den problemas a la hora de utilizarlos luego.
     let divBotones;
@@ -78,7 +79,7 @@ function generarBotones() {
         //Introducimos el boton al div.
         divBotones.appendChild(botonLetra);
 
-        //Cada vez que acabe la fila, introduciremos el div creado al div que contiene el input y las pistas.
+        //Cada vez que acabe la fila, introduciremos el div creado al div que contiene el input y las pistas de como jugar.
         if (i == fila1-1 || i == fila1+fila2-1 || i == fila1+fila2+fila3-1) {
             divEntero.appendChild(divBotones);
         }
@@ -89,7 +90,7 @@ function generarBotones() {
  * Funcion que genera una palabra aleatoria y la oculta con "-".
  */
 function generarPalabra() {
-    //Array de palabras para jugar. (18 palabras).
+    //Array de palabras para jugar. (19 palabras).
     let palabras = ["natacion", "logaritmo", "girasol", "plesiosaurio", "paella", "teclado", "mario", "pringles", "playa", "valencia", "restaurante", "miope", "bachiller", "boligrafo", "esternocleidomastoideo", "extremo", "zorro", "xilofono", "mañana"];
     let tematica = ["deporte", "matematicas", "flor", "dinosaurio", "comida", "informatica", "nombre", "marca", "zona", "ciudad", "establecimiento", "caracteristica", "estudios", "utensilio", "musculo", "posicion", "animal", "instrumento", "momento"];
     let aleatorio = Math.floor(Math.random() * (palabras.length));
@@ -106,12 +107,33 @@ function generarPalabra() {
 
     let palabraReal = document.getElementById("palabraFantasma");
     palabraReal.innerText = palabras[aleatorio];
+    console.log(palabras[aleatorio]);
 
     let tema = document.getElementById("tema");
     tema.innerText = tematica[aleatorio];
 }
 
-///// Funciones para comprobar letras. /////
+/**
+ * Funcion que muestra u oculta las normas.
+ */
+function mostrarNormas() {
+    //Pillamos el texto de las normas y el titulo.
+    let texto = document.getElementById("normasJuego");
+    let titulo = document.getElementById("titulo");
+
+    //Mostramos u ocultamos, ademas de modificar el margen del titulo con la parte superior de la pantalla (Para que no haga "Scroll").
+    if(texto.style.display == "none") {
+        texto.style.display = "block";
+        titulo.style = "margin-top: 25px";
+        this.value = "Ocultar normas";
+    } else {
+        texto.style.display = "none";
+        this.value = "Mostrar normas";
+        titulo.style = "margin-top: 80px";        
+    }
+}
+
+/////////////// Funciones para comprobar letras. ///////////////
 /**
  * Funcion que comprobara si la letra esta en la palabra real (Por boton).
  */
@@ -194,7 +216,7 @@ function comprobarLetraTeclado(tecla) {
     document.getElementById("escribir").value = "";
 }
 
-///// Funciones relacionadas con las vidas. /////
+/////////////// Funciones relacionadas con las vidas. ///////////////
 /**
  * Funcion que genera las vidas del jugador.
  */
@@ -229,7 +251,7 @@ function restaVida() {
     }
 }
 
-///// Funciones relacionadas con el final del juego. /////
+/////////////// Funciones relacionadas con el final del juego. ///////////////
 /**
  * Funcion que comprueba si a la palabra oculta le queda alguna letra oculta aun.
  */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <label for="email">Mi email es:</label>
+        <input type="email" id="email" name="email">
+        <br>
+
+        <label for="url">Mi dirección web es:</label>
+        <input type="url" id="url" name="url">
+        <br>
+
+        <script>
+            /**
+             * setCustomValidity() : Mensaje de error personalizado.
+             * checkValidity() : true/false. (Será "true" si todos los campos son válidos y no muestran ningún mensaje de error).
+             * ValidityState:
+             * elemento.validity.
+             * valid: "true" si es valido el contenido.
+             * valueMissing: "true" cuando el elemento está vacío y es Required.
+             * typeMismatch: "ture" cuando pones una sintaxis inválida para el campo.
+             * patternMismatch: "true" cuando no corresponde al atributo "pattern".
+             * tooLong: "ture" cuando se supera el "maxLength".
+             * rangeUnderflow: "true" cuando es inferior al "minlength".
+             * 
+            */
+            window.addEventListener('load', inicio);
+
+            function inicio() {
+
+            }
+        </script>
+    </body>
+</html>

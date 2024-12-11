@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo de JavaScript</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <script>
+            //Buscar archivo "Datos".
+            fetch("https://jsonplaceholder.typicode.com/todos/1")
+                .then(response=>response.json()) //Convierte el archivo a "json".
+                .then(datos=>console.log(datos)); //Muestra los datos encontrados.
+        </script>
+    </body>
+</html>

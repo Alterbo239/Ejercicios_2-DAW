@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Importado</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <!--
+        <script type="module">
+            import {sumar, restar} from './modulo1.js';
+            alert(sumar(3,8)); 
+            alert(restar(10,3));
+        </script>
+
+        <script type="module">
+            import Dado from './dado.js';
+            const dado1 = new Dado();
+            alert(dado1.valor);
+            dado1.tirar();
+            alert(dado1.valor);    
+        </script>
+
+        <script>
+            const mapa1 = new Map();
+            mapa1.set("hola", "hello");
+            mapa1.set("rojo", "red");
+            mapa1.set("auto", "car");
+            
+            const palcastellano = prompt("Ingrese una palabra en castellano:");
+            document.write(`La traducción de ${palcastellano} es ${mapa1.get(palcastellano)}`);
+
+
+            document.write("Claves y valores del mapa.<br>")
+            mapa1.forEach((valor, clave) => document.write(`${clave}  ${valor}<br>`));
+            //mapa.set = añade. mapa.delete = elimina lo que especifiques. mapa.clear = vacia. Key y value.
+        </script>
+        -->
+
+        <script>
+            const mapa1 = new Map([
+                ["hola", "hello"],
+                ["rojo", "red"],
+                ["auto", "car"]
+            ]);
+            const set1 = new Set([
+                ["Rojo"],
+                ["Amarillo"],
+                ["Verde"],
+                ["Azul"]
+            ]);
+
+            let arr1 = [2, 3, 9];
+            let arr2 = Array.from(arr1); //Crea un bjeto aparte a raiz de el primero.
+            let arr3 = arr1; //Copia los valores incluso si el primero cambia.
+            let arrMapa = Array.from(mapa1);
+            let arrSet = Array.from(set1);
+            let arr4 = Array.from(arr2, (ele) => ele * 3);
+
+            let semana = ["domingo", "lunes", "martes", "miercoles", "jueves", "viernes", "sabado"];
+
+            arr1.fill(22);
+
+            console.log(arr1);
+            console.log(arr2);
+            console.log(arr3);
+            console.log(arrMapa);
+            console.log(arrSet);
+            console.log(arr4);
+
+            for (const e of semana.keys()) {
+                document.write(e + " ");
+            }
+            document.write("<br>");
+            for (const e of semana.values()) {
+                document.write(e + " ");
+            }
+            document.write("<br>");
+            for (const e of semana.entries()) {
+                document.write(e + " ");
+            }
+        </script>
+
+        <script>
+            const personas = [
+                {
+                    nombre: "pedro",
+                    edad: 34
+                },
+                {
+                    nombre: "ana",
+                    edad: 54
+                },
+                {
+                    nombre: "carlos",
+                    edad: 12
+                },
+                {
+                    nombre: "maría",
+                    edad: 22
+                },
+                {
+                    nombre: "oscar",
+                    edad: 72
+                }
+            ];
+
+            let per = personas.find((persona, indice) => persona.nombre == "maría");
+            if (per != undefined)
+                console.log(per);
+            else
+                console.log("No se encuentra maría en el vector de objetos");
+            let indice = personas.findIndex((persona, indice) => persona.nombre == "maría"); //Persona = objeto. inidice = porisicon.
+            if (indice != -1)
+                console.log("Se encuentra en la posción " + indice + " del arreglo.");
+            else
+                console.log("No se encuentra maría en el vector de objetos");
+
+            const personasmayores = personas.filter((elemento, indice, arreglo) => elemento.edad >= 18); //Elemento = objeto. indice = posicion. arreglo = Array completo.
+            console.log(personasmayores);
+
+            const numeros = [1, 4, 7, 12, 2, 55, 23];
+            const cantidad = numeros.reduce((acu, ele, ind, num) => {
+                if (ele >= 10) {
+                    acu += ele - 5;
+                }
+                return acu;
+            }, 50);
+
+            console.log("¡¡¡Reduce!!! " + cantidad);
+        </script>
+    </body>
+</html>
