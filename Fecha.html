@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de JavaScript</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        function mostrarFechaHora() {
+            let fecha;
+            fecha = new Date();
+            document.write('Hoy es ');
+            document.write(fecha.getDate() + '/'); //Numero del dia del mes.
+
+            if (fecha.getMonth() < 9) {
+                document.write("0" + (fecha.getMonth() + 1) + '/'); //Numero del mes.
+            } else {
+                document.write((fecha.getMonth() + 1) + '/'); //Numero del mes.
+            }
+
+            document.write(fecha.getFullYear()); //Numero del "any".
+
+            document.write('<br>');
+
+            document.write('Es la hora ');
+            if (fecha.getHours() < 10) {
+                document.write("0" + fecha.getHours() + ':'); //Hora.
+            } else {
+                document.write(fecha.getHours() + ':'); //Hora.
+            }
+
+            if (fecha.getMinutes() < 10) {
+                document.write("0" + fecha.getMinutes() + ':'); //Minutos.
+            } else {
+                document.write(fecha.getMinutes() + ':'); //Minutos.
+            }
+
+            if (fecha.getSeconds() < 10) {
+                document.write("0" + fecha.getSeconds()); //Segundos.
+            } else {
+                document.write(fecha.getSeconds()); //Segundos.
+            }
+            
+        }
+
+        //Llamada a la función
+        mostrarFechaHora();
+    </script>
+
+</body>
+
+</html>
